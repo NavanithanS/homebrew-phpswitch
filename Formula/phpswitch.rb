@@ -7,6 +7,7 @@ class Phpswitch < Formula
 
   def install
     bin.install "php-switcher.sh" => "phpswitch"
+    generate_completions_from_executable(bin/"phpswitch", "completions")
   end
 
   test do
